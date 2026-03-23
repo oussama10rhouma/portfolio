@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==================== LOADER ==================== -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <span class="loader-text">Loading...</span>
+        </div>
+    </div>
+
+    <!-- ==================== CURSOR ==================== -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Portfolio<span class="logo-bracket"> /&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" data-i18n="nav_about">À propos</a></li>
+                <li><a href="#experience" data-i18n="nav_experience">Expérience</a></li>
+                <li><a href="#education" data-i18n="nav_education">Formation</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projets</a></li>
+                <li><a href="#skills" data-i18n="nav_skills">Compétences</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle" title="Switch language">
+                    <span class="lang-flag" id="langFlag">🇬🇧</span>
+                    <span class="lang-label" id="langLabel">EN</span>
+                </button>
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-burger" id="navBurger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge" data-i18n="hero_badge">Ouvert aux opportunités</div>
+            <h1 class="hero-title">
+                <span class="hero-greeting" data-i18n="hero_greeting">Bonjour, je suis</span>
+                <span class="hero-name glitch" data-text="Oussama Bel haj rhouma">Oussama Bel haj rhouma</span>
+            </h1>
+            <div class="hero-typewriter">
+                <span class="typewriter-prefix" data-i18n="hero_prefix">Je suis </span>
+                <span class="typewriter-text" id="typewriter"></span>
+                <span class="typewriter-cursor">|</span>
+            </div>
+            <p class="hero-description" data-i18n="hero_description">
+                Ingénieur logiciel & étudiant en Master spécialisé : Expert Data, IA & MLOps à Télécom Paris.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary" data-i18n="hero_cta_projects">Voir mes projets</a>
+                <a href="#contact" class="btn btn-outline" data-i18n="hero_cta_contact">Me contacter</a>
+            </div>
+            <div class="hero-social">
+                <a href="https://github.com/oussama10rhouma" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/oussama-belhaj-rhouma/" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:belhajrhouma@telecom-paris.fr" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#about" class="scroll-indicator">
+                <span data-i18n="hero_scroll">Défiler</span>
+                <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about_title">À propos de moi</h2>
+            <div class="section-line"></div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p data-i18n="about_p1">
+                        Ingénieur logiciel diplômé de la Faculté des Sciences de Tunis, actuellement en Master spécialisé : Expert Data, IA & MLOps à <strong>Télécom Paris</strong>, l'une des meilleures écoles d'ingénieurs en France et en Europe.
+                    </p>
+                    <p data-i18n="about_p2">
+                        Fort d'une expérience de plus d'un an chez <strong>Advanced Derivative Solutions</strong> en tant qu'ingénieur logiciel, j'ai travaillé sur des plateformes financières optimisées intégrant la gestion de devises, la facturation et la gestion de crédits.
+                    </p>
+                    <p data-i18n="about_p3">
+                        Passionné par les nouvelles technologies, je combine mes compétences en développement full-stack (Java/Spring Boot, Angular, React) avec mon expertise croissante en Data Science, Big Data et Machine Learning.
+                    </p>
+                </div>
+                <div class="about-stats reveal">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="3">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label" data-i18n="about_stat1">Années d'expérience</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="10">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label" data-i18n="about_stat2">Projets réalisés</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="25">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label" data-i18n="about_stat3">Technologies maîtrisées</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-label" data-i18n="about_stat4">Langues parlées</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <h2 class="section-title" data-i18n="exp_title">Expérience Professionnelle</h2>
+            <div class="section-line"></div>
+
+            <div class="timeline">
+                <!-- EXP 1 -->
+                <div class="timeline-item reveal" data-side="right">
+                    <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
+                    <div class="timeline-date">
+                        <span data-i18n="exp1_date">Août 2024 — Août 2025</span>
+                        <span class="timeline-duration" data-i18n="exp1_dur">1 an 1 mois</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <h3 data-i18n="exp1_role">Ingénieur Logiciel</h3>
+                            <span class="card-company">Advanced Derivative Solutions</span>
+                            <span class="card-location"><i class="fas fa-map-marker-alt"></i> <span data-i18n="exp1_loc">Tunis, Tunisie</span></span>
+                            <span class="card-type badge" data-i18n="exp1_type">CDI</span>
+                        </div>
+                        <ul class="card-details">
+                            <li data-i18n="exp1_d1">Travail sur une plateforme financière optimisée intégrant la gestion de devises, la facturation et la gestion de crédits, avec une approche proactive des fluctuations de taux de change.</li>
+                            <li data-i18n="exp1_d2">Gestion de l'import et de l'export des données clients pour assurer la cohérence et la fiabilité du système.</li>
+                            <li data-i18n="exp1_d3">Gestion des profils et identifiants clients, garantissant une authentification sécurisée et l'intégrité des données.</li>
+                        </ul>
+                        <div class="card-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Angular</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Spring Security</span>
+                            <span class="tag">Hibernate</span>
+                            <span class="tag">PrimeNG</span>
+                            <span class="tag">Highcharts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EXP 2 -->
+                <div class="timeline-item reveal" data-side="left">
+                    <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="timeline-date">
+                        <span data-i18n="exp2_date">Fév 2024 — Juil 2024</span>
+                        <span class="timeline-duration" data-i18n="exp2_dur">6 mois</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <h3 data-i18n="exp2_role">Stagiaire Ingénieur Logiciel</h3>
+                            <span class="card-company">Advanced Derivative Solutions</span>
+                            <span class="card-location"><i class="fas fa-map-marker-alt"></i> <span data-i18n="exp2_loc">Tunis, Tunisie</span></span>
+                            <span class="card-type badge" data-i18n="exp2_type">Stage PFE</span>
+                        </div>
+                        <ul class="card-details">
+                            <li data-i18n="exp2_d1">Contribution au développement d'une plateforme d'optimisation des opérations financières : gestion de comptes bancaires, gestion et affectation de factures, gestion de devises et allocation de crédits.</li>
+                            <li data-i18n="exp2_d2">La plateforme priorise la gestion proactive des fluctuations de taux de change, essentielle dans la finance internationale.</li>
+                        </ul>
+                        <div class="card-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Angular</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">DTO</span>
+                            <span class="tag">DAO</span>
+                            <span class="tag">Spring Data</span>
+                            <span class="tag">Highcharts</span>
+                            <span class="tag">PrimeNG</span>
+                            <span class="tag">Linux</span>
+                            <span class="tag">GitLab</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EXP 3 -->
+                <div class="timeline-item reveal" data-side="right">
+                    <div class="timeline-dot"><i class="fas fa-code"></i></div>
+                    <div class="timeline-date">
+                        <span data-i18n="exp3_date">Juil 2023 — Août 2023</span>
+                        <span class="timeline-duration" data-i18n="exp3_dur">2 mois</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <h3 data-i18n="exp3_role">Stagiaire Ingénieur Logiciel</h3>
+                            <span class="card-company">Sofrecom</span>
+                            <span class="card-location"><i class="fas fa-map-marker-alt"></i> <span data-i18n="exp3_loc">Tunisie</span></span>
+                            <span class="card-type badge">Stage</span>
+                        </div>
+                        <ul class="card-details">
+                            <li data-i18n="exp3_d1">Revitalisation de l'interface utilisateur de supervision avec la bibliothèque Boosted d'Orange, visant un design cohérent aligné avec le style Orange.</li>
+                            <li data-i18n="exp3_d2">Rôle clé dans l'assurance qualité grâce à l'automatisation complète des tests, garantissant la fonctionnalité et la fiabilité de la plateforme.</li>
+                        </ul>
+                        <div class="card-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Spring MVC</span>
+                            <span class="tag">Angular</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Selenium</span>
+                            <span class="tag">TestNG</span>
+                            <span class="tag">Cucumber</span>
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">Bootstrap</span>
+                            <span class="tag">GitLab</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EXP 4 -->
+                <div class="timeline-item reveal" data-side="left">
+                    <div class="timeline-dot"><i class="fas fa-laptop-code"></i></div>
+                    <div class="timeline-date">
+                        <span data-i18n="exp4_date">Juin 2022 — Juil 2022</span>
+                        <span class="timeline-duration" data-i18n="exp4_dur">2 mois</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <h3 data-i18n="exp4_role">Stagiaire Développement Web</h3>
+                            <span class="card-company">SONEDE</span>
+                            <span class="card-location"><i class="fas fa-map-marker-alt"></i> <span data-i18n="exp4_loc">Tunisie</span></span>
+                            <span class="card-type badge">Stage</span>
+                        </div>
+                        <ul class="card-details">
+                            <li data-i18n="exp4_d1">Contribution au développement d'un site web pour le signalement de fuites, incluant une carte interactive pour la localisation et un formulaire de soumission avec images.</li>
+                            <li data-i18n="exp4_d2">Implémentation d'un système de notifications par email pour informer les utilisateurs de l'état de réparation des fuites signalées.</li>
+                        </ul>
+                        <div class="card-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">jQuery</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EDUCATION ==================== -->
+    <section class="section" id="education">
+        <div class="container">
+            <h2 class="section-title" data-i18n="edu_title">Formation</h2>
+            <div class="section-line"></div>
+
+            <div class="timeline timeline-edu">
+                <!-- EDU 1 -->
+                <div class="timeline-item reveal" data-side="right">
+                    <div class="timeline-dot edu-dot"><i class="fas fa-university"></i></div>
+                    <div class="timeline-date">
+                        <span data-i18n="edu1_date">Sep 2025 — Présent</span>
+                    </div>
+                    <div class="timeline-card edu-card">
+                        <div class="card-header">
+                            <h3 data-i18n="edu1_degree">Master spécialisé — Intelligence Artificielle</h3>
+                            <span class="card-company">Télécom Paris</span>
+                            <span class="card-location"><i class="fas fa-map-marker-alt"></i> Paris, France</span>
+                        </div>
+                        <ul class="card-details">
+                            <li data-i18n="edu1_d1">Programme classé N°1 en Data Science & IA (Eduniversal 2024)</li>
+                            <li data-i18n="edu1_d2">Programme intensif de 16 mois incluant 10 mois de cours et un projet de thèse de 4 à 6 mois.</li>
+                            <li data-i18n="edu1_d3">Expertise Data de bout en bout : du Data Engineering et Big Data au MLOps en production.</li>
+                            <li data-i18n="edu1_d4">IA avancée : curriculum approfondi en Machine Learning et Deep Learning.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- EDU 2 -->
+                <div class="timeline-item reveal" data-side="left">
+                    <div class="timeline-dot edu-dot"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="timeline-date">
+                        <span data-i18n="edu2_date">Sep 2021 — Juin 2024</span>
+                    </div>
+                    <div class="timeline-card edu-card">
+                        <div class="card-header">
+                            <h3 data-i18n="edu2_degree">Diplôme d'Ingénieur — Informatique</h3>
+                            <span class="card-company">Faculté des Sciences de Tunis (FST)</span>
+                            <span class="card-location"><i class="fas fa-map-marker-alt"></i> Tunis, Tunisie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EDU 3 -->
+                <div class="timeline-item reveal" data-side="right">
+                    <div class="timeline-dot edu-dot"><i class="fas fa-book"></i></div>
+                    <div class="timeline-date">
+                        <span data-i18n="edu3_date">Sep 2019 — Juin 2021</span>
+                    </div>
+                    <div class="timeline-card edu-card">
+                        <div class="card-header">
+                            <h3 data-i18n="edu3_degree">Cycle Préparatoire — MP Mathématiques-Physique</h3>
+                            <span class="card-company">IPEIT — Institut Préparatoire aux Études d'Ingénieurs de Tunis</span>
+                            <span class="card-location"><i class="fas fa-map-marker-alt"></i> Tunis, Tunisie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EDU 4 -->
+                <div class="timeline-item reveal" data-side="left">
+                    <div class="timeline-dot edu-dot"><i class="fas fa-school"></i></div>
+                    <div class="timeline-date">
+                        <span data-i18n="edu4_date">Sep 2015 — Juin 2019</span>
+                    </div>
+                    <div class="timeline-card edu-card">
+                        <div class="card-header">
+                            <h3 data-i18n="edu4_degree">Baccalauréat — Mathématiques</h3>
+                            <span class="card-company">Lycée Abdelaziz Khouja, Kélibia</span>
+                            <span class="card-location"><i class="fas fa-award"></i> <span data-i18n="edu4_grade">Mention Bien</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section class="section section-alt" id="projects">
+        <div class="container">
+            <h2 class="section-title" data-i18n="proj_title">Projets</h2>
+            <div class="section-line"></div>
+
+            <!-- filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Tous</button>
+                <button class="filter-btn" data-filter="ai" data-i18n="filter_ai">IA / ML</button>
+                <button class="filter-btn" data-filter="bigdata" data-i18n="filter_bigdata">Big Data</button>
+                <button class="filter-btn" data-filter="mlops" data-i18n="filter_mlops">MLOps</button>
+                <button class="filter-btn" data-filter="fullstack" data-i18n="filter_fullstack">Full-Stack</button>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card reveal" data-category="bigdata">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ahmedfekhfakh/stock-game-correlation" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Gaming vs Stock Market Prediction</h3>
+                    <p class="project-date">Fév 2026 — Mars 2026</p>
+                    <p class="project-desc" data-i18n="proj1_desc">Pipeline Data Engineering corrélant la popularité des jeux vidéo avec les cours boursiers. Extraction depuis SteamSpy, Twitch et Yahoo Finance, transformation via Apache Spark en architecture Data Lake 3 couches sur S3, corrélation de Pearson glissante et modèle XGBoost. Orchestré par Airflow, visualisé via Kibana et 100% Dockerisé.</p>
+                    <div class="project-tags">
+                        <span>Airflow</span><span>Spark</span><span>S3</span><span>XGBoost</span><span>Docker</span><span>Kibana</span><span>PostgreSQL</span>
+                    </div>
+                </div>
+
+                <!-- Project - Bank Fraud Detection MLOps -->
+                <div class="project-card reveal" data-category="mlops">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ahmedfekhfakh/Fraudguard" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title" data-i18n="proj_mlops_title">Bank Fraud Detection Pipeline | MLOps</h3>
+                    <p class="project-date">Mars 2026</p>
+                    <p class="project-desc" data-i18n="proj_mlops_desc">Conception d'un pipeline MLOps de bout en bout automatisant l'entraînement continu et le déploiement d'un modèle de classification de fraudes bancaires.</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>Scikit-learn</span><span>Airflow</span><span>MLflow</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span><span>GitHub Actions</span><span>S3</span><span>FastAPI</span><span>Streamlit</span><span>Elasticsearch</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal" data-category="ai">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-palette"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/Telecom-Paris-Team-L-oreal-2025-2026/Loreal-Shades-Clustering" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">L'Oréal Beauty Tech — Shade Clustering</h3>
+                    <p class="project-date">Oct 2025 — <span data-i18n="present">Présent</span></p>
+                    <p class="project-desc" data-i18n="proj2_desc">Projet Data Science « Fil Rouge » visant à segmenter les teintes de produits cosmétiques pour améliorer la précision des recommandations. Évaluation de Clustering, KNN et Gradient Boosting avec un stack Python (Pandas, NumPy, Scikit-learn).</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>Scikit-learn</span><span>KNN</span><span>Clustering</span><span>Gradient Boosting</span><span>Pandas</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card reveal" data-category="bigdata">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-database"></i></div>
+                        <div class="project-links">
+                        </div>
+                    </div>
+                    <h3 class="project-title">Hadoop Cluster & Sentiment Analysis</h3>
+                    <p class="project-date">Sep 2025 — Déc 2025</p>
+                    <p class="project-desc" data-i18n="proj3_desc">Déploiement d'un cluster Hadoop complet (4 serveurs) pour analyser 50 Go d'avis Amazon. Configuration HDFS, YARN, ZooKeeper, HBase. Scripts PySpark pour le prétraitement distribué et classification via Spark ML pour l'analyse de sentiment.</p>
+                    <div class="project-tags">
+                        <span>Hadoop</span><span>HDFS</span><span>YARN</span><span>HBase</span><span>PySpark</span><span>Spark ML</span><span>ZooKeeper</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card reveal" data-category="ai">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-utensils"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/tahianahajanirina/mangetamain" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">MangeTaMain</h3>
+                    <p class="project-date">Oct 2025 — Déc 2025</p>
+                    <p class="project-desc" data-i18n="proj4_desc">Application ML full-stack de recommandation de recettes combinant filtrage collaboratif (SVD), clustering (HDBSCAN), prédiction de temps de cuisson, classification nutritionnelle et analyse de sentiment NLP sur 230K+ recettes et 1M+ avis. Chatbot RAG (Google Gemini), UI Streamlit, Docker et CI/CD.</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>ML</span><span>NLP</span><span>SVD</span><span>HDBSCAN</span><span>Streamlit</span><span>Docker</span><span>CI/CD</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card reveal" data-category="bigdata">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/oussama10rhouma/mapreduce-distributed" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title" data-i18n="proj5_title">MapReduce Distribué from Scratch</h3>
+                    <p class="project-date">Sep 2025 — Nov 2025</p>
+                    <p class="project-desc" data-i18n="proj5_desc">Système MapReduce distribué en Python pour traiter 20 Go de données Common Crawl sur un setup hétérogène (Windows Master, 3 Workers Linux, NFS partagé). Pipelines WordCount, tri de fréquences distribué et détection de langue. Benchmarks avec la loi d'Amdahl.</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>MapReduce</span><span>TCP/IP</span><span>Linux</span><span>NFS</span><span>Distributed Systems</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card reveal" data-category="fullstack">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                        <div class="project-links">
+                        </div>
+                    </div>
+                    <h3 class="project-title" data-i18n="proj6_title">Upload de fichiers vers AWS</h3>
+                    <p class="project-date">Oct 2023 — Nov 2023</p>
+                    <p class="project-desc" data-i18n="proj6_desc">Application full-stack Spring Boot + React permettant aux utilisateurs d'uploader facilement des fichiers vers AWS.</p>
+                    <div class="project-tags">
+                        <span>Spring Boot</span><span>React</span><span>AWS</span>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card reveal" data-category="fullstack">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/Ahmedfekhfakh/Fraudguard" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title" data-i18n="proj7_title">Application bancaire de gestion de rapports</h3>
+                    <p class="project-date">Juil 2023 — Sep 2023</p>
+                    <p class="project-desc" data-i18n="proj7_desc">Application bancaire de gestion de rapports annuels avec authentification des auditeurs, sélection d'agences, et ajout/téléchargement de rapports PDF.</p>
+                    <div class="project-tags">
+                        <span>Angular</span><span>Spring Boot</span><span>Spring Security</span><span>MySQL</span><span>Docker</span><span>Bootstrap</span>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card reveal" data-category="fullstack">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-calendar-check"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/oussama-belhaj-rhouma/exams_surveilanve_pfa" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title" data-i18n="proj8_title">Gestion des Surveillants d'Examens (PFA)</h3>
+                    <p class="project-date">Fév 2023 — Mai 2023</p>
+                    <p class="project-desc" data-i18n="proj8_desc">Plateforme centralisée de gestion des surveillants universitaires avec calendrier, algorithme intelligent de recommandation de dates selon la disponibilité et attribution d'heures selon le grade.</p>
+                    <div class="project-tags">
+                        <span>Spring</span><span>Spring Security</span><span>Angular</span><span>MySQL</span>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card reveal" data-category="fullstack">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/oussama-belhaj-rhouma/E_commerce" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title" data-i18n="proj9_title">Application E-commerce Full-Stack</h3>
+                    <p class="project-date">Jan 2023 — Mars 2023</p>
+                    <p class="project-desc" data-i18n="proj9_desc">Application e-commerce responsive avec intégration de paiement Stripe, gestion d'état avancée via React Context API, Next.js comme backend et Sanity CMS pour la gestion de contenu.</p>
+                    <div class="project-tags">
+                        <span>Next.js</span><span>React</span><span>Stripe</span><span>Sanity CMS</span>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="project-card reveal" data-category="fullstack">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-dumbbell"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/oussama-belhaj-rhouma/web_gym" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title" data-i18n="proj10_title">Application Fitness Exercises</h3>
+                    <p class="project-date">Sep 2022 — Déc 2022</p>
+                    <p class="project-desc" data-i18n="proj10_desc">Application fitness avec accès à 1000+ exercices, catégories et groupes musculaires, exemples pratiques, pagination, vidéos YouTube associées et suggestions similaires. Développée avec React et RapidAPI.</p>
+                    <div class="project-tags">
+                        <span>React</span><span>Material UI</span><span>RapidAPI</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title" data-i18n="skills_title">Compétences</h2>
+            <div class="section-line"></div>
+
+            <div class="skills-grid">
+
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <i class="fas fa-brain"></i>
+                        <h3 data-i18n="skill_cat1">Intelligence Artificielle</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span>Machine Learning</span></div>
+                        <div class="skill-item"><span>Deep Learning</span></div>
+                        <div class="skill-item"><span>NLP</span></div>
+                        <div class="skill-item"><span>Supervised Learning</span></div>
+                        <div class="skill-item"><span>Unsupervised Learning</span></div>
+                        <div class="skill-item"><span>Time Series</span></div>
+                        <div class="skill-item"><span>Generative AI</span></div>
+                        <div class="skill-item"><span>MLOps</span></div>
+                        <div class="skill-item"><span>Data Science</span></div>
+                        <div class="skill-item"><span>Sentiment Analysis</span></div>
+                        <div class="skill-item"><span>Spark ML</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Big Data & Cloud</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span>Hadoop</span></div>
+                        <div class="skill-item"><span>HDFS</span></div>
+                        <div class="skill-item"><span>Apache Spark</span></div>
+                        <div class="skill-item"><span>PySpark</span></div>
+                        <div class="skill-item"><span>Kafka</span></div>
+                        <div class="skill-item"><span>Airflow</span></div>
+                        <div class="skill-item"><span>MapReduce</span></div>
+                        <div class="skill-item"><span>HBase</span></div>
+                        <div class="skill-item"><span>ZooKeeper</span></div>
+                        <div class="skill-item"><span>Elasticsearch</span></div>
+                        <div class="skill-item"><span>Kibana</span></div>
+                        <div class="skill-item"><span>AWS / GCS / Azure</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <i class="fas fa-code"></i>
+                        <h3 data-i18n="skill_cat3">Langages de Programmation</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span>Python</span></div>
+                        <div class="skill-item"><span>Java</span></div>
+                        <div class="skill-item"><span>JavaScript</span></div>
+                        <div class="skill-item"><span>TypeScript</span></div>
+                        <div class="skill-item"><span>SQL</span></div>
+                        <div class="skill-item"><span>PL/SQL</span></div>
+                        <div class="skill-item"><span>JSON</span></div>
+                        <div class="skill-item"><span>C</span></div>
+                        <div class="skill-item"><span>C#</span></div>
+                        <div class="skill-item"><span>PHP</span></div>
+                        <div class="skill-item"><span>HTML / CSS</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Frameworks & Libraries</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span>Spring Boot</span></div>
+                        <div class="skill-item"><span>Spring Security</span></div>
+                        <div class="skill-item"><span>Spring MVC</span></div>
+                        <div class="skill-item"><span>Spring Data</span></div>
+                        <div class="skill-item"><span>Hibernate</span></div>
+                        <div class="skill-item"><span>Angular</span></div>
+                        <div class="skill-item"><span>React.js</span></div>
+                        <div class="skill-item"><span>Next.js</span></div>
+                        <div class="skill-item"><span>PrimeNG</span></div>
+                        <div class="skill-item"><span>Bootstrap</span></div>
+                        <div class="skill-item"><span>Streamlit</span></div>
+                        <div class="skill-item"><span>jQuery</span></div>
+                        <div class="skill-item"><span>NumPy</span></div>
+                        <div class="skill-item"><span>Pandas</span></div>
+                        <div class="skill-item"><span>Scikit-learn</span></div>
+                        <div class="skill-item"><span>TensorFlow</span></div>
+                        <div class="skill-item"><span>PyTorch</span></div>
+                        <div class="skill-item"><span>Keras</span></div>
+                        <div class="skill-item"><span>XGBoost</span></div>
+                        <div class="skill-item"><span>Matplotlib</span></div>
+                        <div class="skill-item"><span>Seaborn</span></div>
+                        <div class="skill-item"><span>Hugging Face</span></div>
+                        <div class="skill-item"><span>LangChain</span></div>
+                        <div class="skill-item"><span>OpenCV</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>DevOps & Outils</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span>Docker</span></div>
+                        <div class="skill-item"><span>Kubernetes</span></div>
+                        <div class="skill-item"><span>CI/CD</span></div>
+                        <div class="skill-item"><span>Git</span></div>
+                        <div class="skill-item"><span>GitHub</span></div>
+                        <div class="skill-item"><span>GitLab</span></div>
+                        <div class="skill-item"><span>Linux</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <i class="fas fa-database"></i>
+                        <h3 data-i18n="skill_cat6">Bases de Données</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span>PostgreSQL</span></div>
+                        <div class="skill-item"><span>MySQL</span></div>
+                        <div class="skill-item"><span>HBase</span></div>
+                        <div class="skill-item"><span>MariaDB</span></div>
+                        <div class="skill-item"><span>MongoDB</span></div>
+                        <div class="skill-item"><span>Oracle DB</span></div>                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact_title">Contact</h2>
+            <div class="section-line"></div>
+
+            <div class="contact-wrapper reveal">
+                <div class="contact-info">
+                    <h3 data-i18n="contact_subtitle">Travaillons ensemble</h3>
+                    <p data-i18n="contact_text">N'hésitez pas à me contacter pour discuter de projets, d'opportunités ou simplement pour échanger.</p>
+                    <div class="contact-links">
+                        <a href="mailto:belhajrhouma@telecom-paris.fr" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>belhajrhouma@telecom-paris.fr</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/oussama-belhaj-rhouma/" class="contact-link">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/oussama10rhouma" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="#hero" data-i18n="footer_top">Retour en haut</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== BACK TO TOP ==================== -->
+    <button class="back-to-top" id="backToTop" title="Top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
